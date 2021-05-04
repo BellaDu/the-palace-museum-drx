@@ -111,7 +111,7 @@ section.horizontal-scroll-cards {
   height: 100%;
   opacity: 0;
   backdrop-filter: blur(20px) saturate(2);
-  transition: opacity 300ms;
+  transition: opacity 800ms;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,6 +330,16 @@ section.horizontal-scroll-cards {
   border-radius: 50%;
 }
 
+.slideshow > button#back:hover {
+  background-color: #eec43b;
+  border-radius: 50%;
+}
+
+.slideshow > button#next:hover {
+  background-color: #eec43b;
+  border-radius: 50%;
+}
+
 .source {
   display: flex;
   align-items: center;
@@ -353,27 +363,20 @@ section.horizontal-scroll-cards {
   left: 0;
   width: 100%;
   display: none;
+  transform: translateY(-330px);
 }
 
 .frame {
   background-color: #822d21;
-  width: 80%;
-  border-radius: 10px;
-  position: absolute;
+  width: 800px;
+  height: 600px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
+  position: absolute;
   font-family: serif;
-  animation: 2s drop;
   color: ivory;
-}
-@keyframes drop {
-  0% {
-    top: -150px;
-  }
-  100% {
-    top: 50%;
-  }
 }
 
 .x {
@@ -992,6 +995,19 @@ section.horizontal-scroll-cards {
   .icon {
     width: 22px;
     height: 33px;
+  }
+
+  .frame {
+    background-color: #822d21;
+    width: 300px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    position: absolute;
+    font-family: serif;
+    color: ivory;
   }
 
   footer {
