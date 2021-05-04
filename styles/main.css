@@ -94,7 +94,42 @@ nav {
 }
 
 /*Inside Decoration Effect goes here*/
+section.horizontal-scroll-cards {
+  display: flex;
+  overflow-x: scroll;
+}
 
+.horizontal-scroll-cards article {
+  flex: 0 0 300px;
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.horizontal-scroll-cards div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  backdrop-filter: blur(20px) saturate(2);
+  transition: opacity 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.horizontal-scroll-cards div:hover {
+  opacity: 1;
+}
+
+.horizontal-scroll-cards p {
+  margin: 0;
+}
+
+/*mine*/
 .slider {
   position: relative;
   display: flex;
@@ -404,20 +439,16 @@ nav {
     font-size: 40px;
   }
 
-  .ctext {
-    top: 50%;
-    left: 50%;
-    transform: translate(-44%, -50%);
-    /*
-      if we do not have this line, the first letter is going to be 
-      at the center, but the actual text is not. by adding this line, 
-      we are sliding it backwards 50%
-      */
+  /*inside decoration*/
+
+  .horizontal-scroll-cards img {
+    width: 500px;
+    height: 330px;
+    display: block;
+  }
+
+  .horizontal-scroll-cards div {
     font-size: 24px;
-    color: ivory;
-    font-family: serif;
-    z-index: 100;
-    backdrop-filter: blur(20px) saturate(2);
   }
 
   .card {
@@ -758,8 +789,12 @@ nav {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .ctext {
-    font-size: 16px;
+  /*inside decoration*/
+
+  .horizontal-scroll-cards img {
+    width: 330px;
+    height: 210px;
+    display: block;
   }
 
   .w1,
